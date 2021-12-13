@@ -13,17 +13,13 @@
 class MrCoxallStack<T> {
 
     // Custom error types
-    enum Errors: Error {
-        case emptyStackException
-    }
+    enum Errors: Error { case emptyStackException }
 
     // ArrayList signifying a stack
     private var stackAsArray = [T]()
 
     // Pushes a number to the stack
-    func push(pushElement: T) {
-        self.stackAsArray.insert(pushElement, at: 0)
-    }
+    func push(pushElement: T) { self.stackAsArray.insert(pushElement, at: 0) }
 
     // Pops the first element in the stack
     func pop() throws -> T {
@@ -44,9 +40,7 @@ class MrCoxallStack<T> {
     }
 
     // Clears the stack
-    func clear() {
-        self.stackAsArray.removeAll()
-    }
+    func clear() { self.stackAsArray.removeAll() }
 
     // Displays the stack
     func showStack() {
