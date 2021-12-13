@@ -26,7 +26,7 @@ class MrCoxallStack<T> {
     }
 
     // Pops the first element in the stack
-    func pull() throws -> T {
+    func pop() throws -> T {
         if self.stackAsArray.count == 0 {
             throw Errors.emptyStackException
         } else {

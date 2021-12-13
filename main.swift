@@ -15,8 +15,8 @@ import Foundation
 // exit = end of program
 let aStack = MrCoxallStack<Int>()
 
-let allowedCommands = ["push", "pull", "show", "peek", "clear", "exit"]
-print("Acceptable Commands:\npush <number> - pull - show - peek - clear - exit")
+let allowedCommands = ["push", "pop", "show", "peek", "clear", "exit"]
+print("Acceptable Commands:\npush <number> - pop - show - peek - clear - exit")
 
 while true {
     print("> ", terminator: "")
@@ -32,7 +32,7 @@ while true {
             }
         } else if userInput!.starts(with: allowedCommands[1]) {
             do {
-                try print("Removed: \(aStack.pull())")
+                try print("Removed: \(aStack.pop())")
             } catch {
                 print("The stack is empty.")
             }
